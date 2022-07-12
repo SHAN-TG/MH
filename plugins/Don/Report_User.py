@@ -3,7 +3,7 @@ import asyncio
 import os
 from pyrogram import filters, Client as Sflix
 
-@Sflix.on_message((filters.command(["report"]) | filters.regex("@admins") | filters.regex("@technomindzyt") | filters.regex("@admin")) & filters.group)
+@Sflix.on_message((filters.command(["report"]) | filters.regex("@admins") | filters.regex("@admin")) & filters.group)
 async def report_user(bot, message):
     if message.reply_to_message:
         chat_id = message.chat.id
@@ -25,4 +25,4 @@ async def report_user(bot, message):
             except:
                 pass
         if success:
-            await message.reply_text("𝖱𝖾𝗉𝗈𝗋𝗍𝖾𝖽 𝗍𝗈 𝖠𝖽𝗆𝗂𝗇𝗌!")
+            await message.reply_text("𝖱𝖾𝗉𝗈𝗋𝗍𝖾𝖽 𝗍𝗈 𝖠𝖽𝗆𝗂𝗇𝗌!\nEven THough Let Me tag someone who is more than admin @TechnoMindzYt")
