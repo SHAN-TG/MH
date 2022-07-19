@@ -47,7 +47,7 @@ async def start(client, message):
     if len(message.command) != 2:
         buttons = [[
         InlineKeyboardButton('➕ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
-   [,[
+   ],[
         InlineKeyboardButton('🍁 ᴏᴡɴᴇʀ', callback_data='me'),
         InlineKeyboardButton('🌿 ɢʀᴏᴜᴘ', url=f'https://t.me/{SUPPORT_CHAT}')
    ],[      
