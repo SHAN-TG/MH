@@ -46,13 +46,13 @@ async def start(client, message):
         await client.send_message(LOG_CHANNEL, script.LOG_TEXT_P.format(message.from_user.id, message.from_user.mention))
     if len(message.command) != 2:
         InlineKeyboardButton('➕ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
-    ],[
+   ][
         InlineKeyboardButton('🍁 ᴏᴡɴᴇʀ', callback_data='me'),
         InlineKeyboardButton('🌿 ɢʀᴏᴜᴘ', url=f'https://t.me/{SUPPORT_CHAT}')
-    ],[      
+   ],[      
         InlineKeyboardButton('⚙️ ʜᴇʟᴘ', callback_data='help'),
         InlineKeyboardButton('😊 ᴀʙᴏᴜᴛ', callback_data='about')
-    ],[
+   ],[
         InlineKeyboardButton('🔰 ᴄʟᴏꜱᴇ ᴛʜᴇ ᴅᴀᴛᴀ🔰', callback_data='close_pages')   
     ]]
         reply_markup = InlineKeyboardMarkup(buttons)
