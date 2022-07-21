@@ -49,7 +49,7 @@ def song(client, message):
         open(thumb_name, 'wb').write(thumb.content)
 
 
-        performer = f"[𝕋𝕖𝕔𝕙𝕟𝕠 𝕄𝕚𝕟𝕕𝕫]" 
+        performer = f"[MOVIESHUB]" 
         duration = results[0]["duration"]
         url_suffix = results[0]["url_suffix"]
         views = results[0]["views"]
@@ -66,7 +66,7 @@ def song(client, message):
             info_dict = ydl.extract_info(link, download=False)
             audio_file = ydl.prepare_filename(info_dict)
             ydl.process_info(info_dict)
-        rep = '**💥 Søɳʛ 🎸 Uƥɭøɗɘɗ 💿 Ɓy✌\n🔊 [𝕋𝕖𝕔𝕙𝕟𝕠 𝕄𝕚𝕟𝕕𝕫 💞 ṀṳṠḭḉ](https://t.me/technomindzchat) 🌷 ...**'
+        rep = '**💥 Søɳʛ 🎸 Uƥɭøɗɘɗ 💿 Ɓy✌\n🔊 [MOVIESHUB 💞 ṀṳṠḭḉ](https://t.me/MoviesHubGroup2) 🌷 ...**'
         secmul, dur, dur_arr = 1, 0, duration.split(':')
         for i in range(len(dur_arr)-1, -1, -1):
             dur += (int(dur_arr[i]) * secmul)
