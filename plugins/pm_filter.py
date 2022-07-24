@@ -1798,37 +1798,45 @@ async def auto_filter(client, msg, spoll=False):
             hehe = await message.reply_photo(photo=imdb.get('poster'), caption=cap, reply_markup=InlineKeyboardMarkup(btn))
             await asyncio.sleep(10)
             await hehe.delete()
-            await hehe.edit_message_reply_markup(
-            chat_id, message_id,
-            InlineKeyboardMarkup([[
-            InlineKeyboardButton(f'🍿 ɪɴꜰᴏ', 'movieinfo')]]))
+            await client.edit_message_media(
+                chat_id=message.chat.id,
+                photo="https://telegra.ph/file/d8f821b86321bd9e3e135.jpg",
+                caption=f"⚙️ Fɪʟᴛᴇʀ Fᴏʀ <code>{search}</code> Cʟᴏꜱᴇᴅ 🗑️",
+                reply_to_message_id=message.message_id
+            )
         except (MediaEmpty, PhotoInvalidDimensions, WebpageMediaEmpty):
             pic = imdb.get('poster')
             poster = pic.replace('.jpg', "._V1_UX360.jpg")
             hmm = await message.reply_photo(photo=poster, caption=cap, reply_markup=InlineKeyboardMarkup(btn))
             await asyncio.sleep(10)
             await hmm.delete()
-            await hmm.edit_message_reply_markup(
-            chat_id, message_id,
-            InlineKeyboardMarkup([[
-            InlineKeyboardButton(f'🍿 ɪɴꜰᴏ', 'movieinfo')]]))
+            await client.edit_message_media(
+                chat_id=message.chat.id,
+                photo="https://telegra.ph/file/d8f821b86321bd9e3e135.jpg",
+                caption=f"⚙️ Fɪʟᴛᴇʀ Fᴏʀ <code>{search}</code> Cʟᴏꜱᴇᴅ 🗑️",
+                reply_to_message_id=message.message_id
+            )
         except Exception as e:
             logger.exception(e)
             fek = await message.reply_photo(photo="https://telegra.ph/file/82b5bbbab6d5e5593b6b2.jpg", caption=cap, reply_markup=InlineKeyboardMarkup(btn))
             await asyncio.sleep(10)
             await fek.delete()
-            await fek.edit_message_reply_markup(
-            chat_id, message_id,
-            InlineKeyboardMarkup([[
-            InlineKeyboardButton(f'🍿 ɪɴꜰᴏ', 'movieinfo')]]))
+            await client.edit_message_media(
+                chat_id=message.chat.id,
+                photo="https://telegra.ph/file/d8f821b86321bd9e3e135.jpg",
+                caption=f"⚙️ Fɪʟᴛᴇʀ Fᴏʀ <code>{search}</code> Cʟᴏꜱᴇᴅ 🗑️",
+                reply_to_message_id=message.message_id
+            )
     else:
         fuk = await message.reply_photo(photo="https://telegra.ph/file/8b42f6caf6ef5fd76766f.jpg", caption=cap, reply_markup=InlineKeyboardMarkup(btn))
         await asyncio.sleep(10)
         await fuk.delete()
-        await fuk.edit_message_reply_markup(
-            chat_id, message_id,
-            InlineKeyboardMarkup([[
-            InlineKeyboardButton(f'🍿 ɪɴꜰᴏ', 'movieinfo')]]))
+        await client.edit_message_media(
+            chat_id=message.chat.id,
+            photo="https://telegra.ph/file/d8f821b86321bd9e3e135.jpg",
+            caption=f"⚙️ Fɪʟᴛᴇʀ Fᴏʀ <code>{search}</code> Cʟᴏꜱᴇᴅ 🗑️",
+            reply_to_message_id=message.message_id
+        )
     if spoll:
         await msg.message.delete()
 
