@@ -1798,7 +1798,7 @@ async def auto_filter(client, msg, spoll=False):
             hehe = await message.reply_photo(photo=imdb.get('poster'), caption=cap, reply_markup=InlineKeyboardMarkup(btn))
             await asyncio.sleep(10)
             await hehe.delete()
-            await query.edit_message_reply_markup(
+            await hehe.edit_message_reply_markup(
             chat_id, message_id,
             InlineKeyboardMarkup([[
             InlineKeyboardButton(f'🍿 ɪɴꜰᴏ', 'movieinfo')]]))
@@ -1808,7 +1808,7 @@ async def auto_filter(client, msg, spoll=False):
             hmm = await message.reply_photo(photo=poster, caption=cap, reply_markup=InlineKeyboardMarkup(btn))
             await asyncio.sleep(10)
             await hmm.delete()
-            await query.edit_message_reply_markup(
+            await hmm.edit_message_reply_markup(
             chat_id, message_id,
             InlineKeyboardMarkup([[
             InlineKeyboardButton(f'🍿 ɪɴꜰᴏ', 'movieinfo')]]))
@@ -1817,7 +1817,7 @@ async def auto_filter(client, msg, spoll=False):
             fek = await message.reply_photo(photo="https://telegra.ph/file/82b5bbbab6d5e5593b6b2.jpg", caption=cap, reply_markup=InlineKeyboardMarkup(btn))
             await asyncio.sleep(10)
             await fek.delete()
-            await query.edit_message_reply_markup(
+            await fek.edit_message_reply_markup(
             chat_id, message_id,
             InlineKeyboardMarkup([[
             InlineKeyboardButton(f'🍿 ɪɴꜰᴏ', 'movieinfo')]]))
@@ -1825,7 +1825,7 @@ async def auto_filter(client, msg, spoll=False):
         fuk = await message.reply_photo(photo="https://telegra.ph/file/8b42f6caf6ef5fd76766f.jpg", caption=cap, reply_markup=InlineKeyboardMarkup(btn))
         await asyncio.sleep(10)
         await fuk.delete()
-        await query.edit_message_reply_markup(
+        await fuk.edit_message_reply_markup(
             chat_id, message_id,
             InlineKeyboardMarkup([[
             InlineKeyboardButton(f'🍿 ɪɴꜰᴏ', 'movieinfo')]]))
