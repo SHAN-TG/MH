@@ -1795,21 +1795,42 @@ async def auto_filter(client, msg, spoll=False):
         cap = f"〓〓〓 <b>[{search}](https://t.me/MH_LinkZ)</b> 〓〓〓\n\n<b>⭐️ ɪᴍᴅʙ N/A | ⏰ ʀᴜɴ N/A ᴍɪɴ\n📆 ʀᴇʟᴇᴀsᴇ ᴅᴀᴛᴇ : [N/A](https://t.me/MoviesHubGroup2)\n\n● <code>Thriller, Family, Drama</code></b>\n● <code>N/A</code>\n\n📖 sᴛᴏʀʏ : <code>N/A</code>\n\n<b>★ ᴘᴏᴡᴇʀᴇᴅ ʙʏ [{message.chat.title}](https://t.me/MoviesHubGroup2)</b>"
     if imdb and imdb.get('poster'):
         try:
-            fmsg = await message.reply_photo(photo=imdb.get('poster'), caption=cap[:1024],
-                                      reply_markup=InlineKeyboardMarkup(btn))
+            hehe = await message.reply_photo(photo=imdb.get('poster'), caption=cap, reply_markup=InlineKeyboardMarkup(btn))
+            await asyncio.sleep(900)
+            await hehe.delete()
+            await app.edit_message_reply_markup(
+            chat_id, message_id,
+            InlineKeyboardMarkup([[
+            InlineKeyboardButton(f'🍿 ɪɴꜰᴏ', 'movieinfo')]]))
         except (MediaEmpty, PhotoInvalidDimensions, WebpageMediaEmpty):
             pic = imdb.get('poster')
             poster = pic.replace('.jpg', "._V1_UX360.jpg")
-            fmsg = await message.reply_photo(photo=poster, caption=cap[:1024], reply_markup=InlineKeyboardMarkup(btn))
+            hmm = await message.reply_photo(photo=poster, caption=cap, reply_markup=InlineKeyboardMarkup(btn))
+            await asyncio.sleep(900)
+            await hmm.delete()
+            await app.edit_message_reply_markup(
+            chat_id, message_id,
+            InlineKeyboardMarkup([[
+            InlineKeyboardButton(f'🍿 ɪɴꜰᴏ', 'movieinfo')]]))
         except Exception as e:
             logger.exception(e)
-            fmsg = await message.reply_photo(photo=NORGE_IMG, caption=cap, reply_markup=InlineKeyboardMarkup(btn))
+            fek = await message.reply_photo(photo="https://telegra.ph/file/82b5bbbab6d5e5593b6b2.jpg", caption=cap, reply_markup=InlineKeyboardMarkup(btn))
+            await asyncio.sleep(900)
+            await fek.delete()
+            await app.edit_message_reply_markup(
+            chat_id, message_id,
+            InlineKeyboardMarkup([[
+            InlineKeyboardButton(f'🍿 ɪɴꜰᴏ', 'movieinfo')]]))
     else:
-        fmsg = await message.reply_photo(photo=NORGE_IMG, caption=cap, reply_markup=InlineKeyboardMarkup(btn))
+        fuk = await message.reply_photo(photo="https://telegra.ph/file/8b42f6caf6ef5fd76766f.jpg", caption=cap, reply_markup=InlineKeyboardMarkup(btn))
+        await asyncio.sleep(900)
+        await fuk.delete()
+        await app.edit_message_reply_markup(
+            chat_id, message_id,
+            InlineKeyboardMarkup([[
+            InlineKeyboardButton(f'🍿 ɪɴꜰᴏ', 'movieinfo')]]))
     if spoll:
-        await msg.message.delete() 
-        await asyncio.sleep(60)
-        await fmsg.delete()
+        await msg.message.delete()
 
 
 async def advantage_spell_chok(msg):
